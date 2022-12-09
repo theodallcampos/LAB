@@ -1,4 +1,4 @@
-name: CI-Trivy
+name: CI
 
 on: [push]
 
