@@ -6,7 +6,7 @@ branches:
 pull_request:
 jobs:
 build:
-name: Build
+name: Build2
 runs-on: ubuntu-20.04
 steps:
 - name: Checkout code
