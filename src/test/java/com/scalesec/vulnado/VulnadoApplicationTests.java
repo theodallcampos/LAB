@@ -9,7 +9,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 @SpringBootTest
 public class VulnadoApplicationTests {
 
-	@Testtheo3
+	@Testtheo4
 	public void contextLoads() {
 	}
 
