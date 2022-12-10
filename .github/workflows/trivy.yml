@@ -5,7 +5,6 @@ on:
       - master
   pull_request:
 jobs:
-job1:
   build:
     name: Build
     runs-on: ubuntu-20.04
@@ -26,17 +25,3 @@ job1:
         uses: github/codeql-action/upload-sarif@v2
         with:
           sarif_file: 'trivy-results.sarif'
-job2:
-needs: job1
-horusec-security:
-    name: horusec-security
-    runs-on: ubuntu-latest
-    steps:
-    - name: Check out code
-      uses: actions/checkout@v2
-      with: # Necessário quando habilitado o autores de commit
-        fetch-depth: 0
-    - name: Running Horusec Security
-      run: |
-        curl -fsSL https://raw.githubusercontent.com/ZupIT/horusec/main/deployments/scripts/install.sh | bash -s latest
-        horusec start -p="./"  
